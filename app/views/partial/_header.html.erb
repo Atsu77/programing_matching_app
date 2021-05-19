@@ -2,15 +2,17 @@
   <div class="container">
     <div class="navbar-header">
       <li class="nav navbar-nav nav-item active">
-        <a class="nav navbar-nav nav-link" href="#">マッチング</a>
+        <%= link_to "PROG CAMP", :root, class: "nav navbar-nav nav-link" %>
       </li>
     </div>
     <ul class="nav navbar-nav navbar-right">
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">ログイン</a>
-      </li>
+      <% if user_signed_in? %>
+      <li><%= link_to "プロフィールを変更", edit_user_registration_path, class: "nav-link" %></li>
+      <li><%= link_to "サインアウト", destroy_user_session_path, class: "nav-link", method: :delete %></li>
+      <% else %>
+      <li><%= link_to "ログイン", new_user_session_path, class: "nav-link" %></li>
       <li><%= link_to "新規登録", new_user_registration_path, class: "nav-link" %></li>
+      <% end %>
     </ul>
   </div>
 </nav>
