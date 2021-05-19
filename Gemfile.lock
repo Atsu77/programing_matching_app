@@ -74,7 +74,7 @@ GEM
     byebug (11.1.3)
     concurrent-ruby (1.1.8)
     crass (1.0.6)
-    devise (4.7.3)
+    devise (4.8.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0)
@@ -83,6 +83,8 @@ GEM
     erubi (1.10.0)
     execjs (2.7.0)
     ffi (1.15.0)
+    font-awesome-sass (5.15.1)
+      sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.8.10)
@@ -208,6 +210,7 @@ DEPENDENCIES
   bootstrap
   byebug
   devise
+  font-awesome-sass
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)
