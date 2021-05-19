@@ -1,3 +1,268 @@
-// Place all the styles related to the top controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+#headerwrap {
+  background: url(back.jpg) no-repeat center top;
+  margin-top: -70px;
+  padding-top: 250px;
+  text-align: center;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 650px;
+  width: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  h1 {
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    letter-spacing: 4px;
+    font-size: 80px;
+    font-weight: bold;
+  }
+  
+  h4 {
+    font-weight: 400;
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 768px) {
+  #headerwrap {
+    padding-top: 180px;
+  }
+}
+
+#social {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f2f2f2;
+
+  i {
+    font-size: 40px;
+    color: #4a4a4a;
+
+    &:hover {
+      color: #1abc9c;
+    }
+  }
+}
+
+#footerwrap {
+  padding-top: 70px;
+  padding-bottom: 50px;
+  background-color: #2f2f2f;
+
+  p {
+    color: #f2f2f2;
+    margin-left: 10px;
+  }
+}
+
+#workwrap {
+  background: url(work.jpg) no-repeat center top;
+  margin-top: -70px;
+  padding-top: 250px;
+  text-align: center;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 650px;
+  width: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  h1 {
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    letter-spacing: 4px;
+    font-size: 80px;
+    font-weight: bold;
+  }
+
+  h4 {
+    font-weight: 400;
+    color: #ffffff;
+  }
+}
+
+#aboutwrap {
+  background: url(about.jpg) no-repeat center top;
+  margin-top: -70px;
+  padding-top: 250px;
+  text-align: center;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 550px;
+  width: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Gallery */
+
+.gallery {
+  margin-top: 30px;
+
+  img:hover {
+    opacity: 0.4;
+  }
+}
+
+/* Contact Form */
+
+#contactwrap {
+  background: url(contact.jpg) no-repeat center top;
+  margin-top: -70px;
+  padding-top: 250px;
+  text-align: center;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 650px;
+  width: 100%;
+  background-size: 100%;
+  background-size: cover;
+
+  h1 {
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    letter-spacing: 4px;
+    font-size: 60px;
+    font-weight: bold;
+  }
+
+  h4 {
+    font-weight: 400;
+    color: #ffffff;
+  }
+}
+
+#contact {
+  padding: 40px 0;
+
+  h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+}
+
+.contact-form {
+  label {
+    color: #999;
+  }
+
+  input, textarea {
+    padding: 10px 12px;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    height: auto;
+  }
+
+  .form-send {
+    text-align: center;
+
+    button {
+      background: #1abc9c;
+      border: 0;
+      padding: 14px 40px;
+      color: #fff;
+      transition: 0.4s;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 15px;
+
+      &:hover {
+        background: #2addb9;
+      }
+    }
+  }
+
+  .validate {
+    display: none;
+    color: red;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-size: 13px;
+  }
+
+  .loading {
+    display: none;
+    color: #555;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+    margin: 15px 0;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      border: 3px solid #18d26e;
+      border-top-color: #eee;
+      -webkit-animation: animate-loading 1s linear infinite;
+      animation: animate-loading 1s linear infinite;
+    }
+  }
+
+  .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    margin: 15px 0;
+  }
+
+  .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    margin: 15px 0;
+  }
+}
+
+
+/* Copyrights */
+
+#copyrights {
+  background: #222222;
+  padding: 20px 0;
+  text-align: center;
+
+  p {
+    margin-bottom: 5px;
+    color: #fff;
+  }
+
+  a {
+    color: #1abc9c;
+  }
+}
+
+.credits {
+  color: #999;
+}
