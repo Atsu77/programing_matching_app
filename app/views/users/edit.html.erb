@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="wrapper">
+    <h1 class="prof">プロフィール</h1>
+    <div class="el-card_body">
+      <div class="form-menu">
+        <div class="form-menu-label">ユーザー名</div>
+        <input class="nickname" type="text" />
+        <div class="form-menu-label">プロフィール画像</div>
+        <div class="form-item-upload">
+          <div class="">
+            <%= image_tag avatar_url(@user), class: "prof-img" %>
+            <img src="profile.png" alt="" />
+            <button type="button" class="btn btn-secondary">
+              画像をアップロード
+            </button>
+          </div>
+        </div>
+        <div class="form-self_introduction">
+          <div class="form-menu-label">自己紹介</div>
+          <textarea name="" id="" cols="30" rows="10" class="el-textarea"></textarea>
+        </div>
+
+        <form>
+        <div class="form-menu-label">Twitter</div>
+          <input type="url">
+        </form>
+        <form>
+        <div class="form-menu-label">GitHub</div>
+          <input type="url">
+        </form>
+
+  </div>
+  <button type="button" class="btn btn-primary">保存</button>
+</div>
+</div>

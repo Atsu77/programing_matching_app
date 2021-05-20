@@ -7,7 +7,7 @@
     </div>
     <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
-      <li><%= link_to "プロフィールを変更", edit_user_registration_path, class: "nav-link" %></li>
+      <li><%= link_to "プロフィール", edit_user_path(current_user.id), class: "nav-link" %></li>
       <li><%= link_to "サインアウト", destroy_user_session_path, class: "nav-link", method: :delete %></li>
       <% else %>
       <li><%= link_to "ログイン", new_user_session_path, class: "nav-link" %></li>

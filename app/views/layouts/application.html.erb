@@ -14,7 +14,7 @@
 
 <body>
   <%= render 'partial/header' %>
-  
+
   <% if flash[:notice] %>
   <div class="alert alert-info">
     <%= flash[:notice] %>
@@ -26,7 +26,7 @@
   </div>
   <% end %>
 
-  <%= yield %>
+    <%= yield %>
 </body>
 
 </html>
