@@ -22,3 +22,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("jquery")
 //import "bootstrap"
+
+$(function(){
+    setTimeout("$('.alert').fadeOut('slow')", 2000);
+  });
