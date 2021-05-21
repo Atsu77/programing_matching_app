@@ -12,10 +12,8 @@ class UsersController < ApplicationController
     #  @user.save
     #end
     if @user.update(user_params)
-      flash[:notice] = "更新に成功しました"
       redirect_to :root
     else
-      flash[:alert] = "更新に失敗しました"
       render action: :edit
     end
   end
