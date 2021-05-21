@@ -5,18 +5,16 @@
             <div class="form-menu">
 
                 <div class="form-menu-label">ユーザー名</div>
-                <h1>
                     <%= @user.name%>
-                </h1>
 
                 <div class="form-menu-label">
                     プロフィール画像
                 </div>
                 <% if @user.profile_photo? %>
-                <%= image_tag @user.profile_photo.url ,size: "100x100", class: "prof-img"%>
+                <%= image_tag @user.profile_photo.url ,size: "200x200", class: "prof-img"%>
                 <% else %>
-                <%= image_tag "profile.png", size: "100x100",class: "default-prof-img" %>
-                <% end %>
+                <%= image_tag "profile.png", size: "200x200",class: "default-prof-img" %>
+                <% end %>   
 
 
                 <div class="form-self_introductioneld">

@@ -37,3 +37,4 @@ yarn-debug.log*
 
 .vscode
 /app/assets/images
+/public/uploads/user/profile_photo
