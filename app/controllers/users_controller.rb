@@ -1,16 +1,12 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_user, only: %i[edit update]
+  before_action :set_user, only: %i[show edit update]
+
+  def show; end
 
   def edit; end
 
   def update
-    #if params[:profile_photo]
-    #  image = params[:profile_photo]
-    #  @user.profile_photo = "#{@user.id}.jpg"
-    #  File.binwrite("public/user_image/#{@user.profile_photo}", image.read)
-    #  @user.save
-    #end
     if @user.update(user_params)
       redirect_to :root
     else

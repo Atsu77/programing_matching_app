@@ -1,3 +1,48 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.wrapper{
+    width: 60%;
+    .prof{
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      height: 20px;
+      width: 80%;
+      margin-top: 20px;
+    }
+    .el-card_body{
+      margin: 10px auto;
+      box-shadow: 10px, 10px, 10px rgba(0, 0, 0, 0.5);
+      .form-menu-label{
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      .nickname{
+        height: 2rem;
+        width: 80%;
+      }
+      .prof-img{
+        width: 80px;
+        height: 80px;
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 5%;
+      }
+      .el-textarea{
+        width: 80%;
+      }
+    }
+    .link-wrap{
+      display: flex;
+    }
+  
+    input {
+      width: 80%;
+    }
+  
+    .btn {
+      margin-top: 20px;
+      width: 300px;
+    }
+  }

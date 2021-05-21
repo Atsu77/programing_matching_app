@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="wrapper">
+        <h1 class="prof">プロフィール</h1>
+        <div class="el-card_body">
+            <div class="form-menu">
+
+                <div class="form-menu-label">ユーザー名</div>
+                <h1>
+                    <%= @user.name%>
+                </h1>
+
+                <div class="form-menu-label">
+                    プロフィール画像
+                </div>
+                <% if @user.profile_photo? %>
+                <%= image_tag @user.profile_photo.url ,size: "100x100", class: "prof-img"%>
+                <% else %>
+                <%= image_tag "profile.png", size: "100x100",class: "default-prof-img" %>
+                <% end %>
+
+
+                <div class="form-self_introductioneld">
+                    <div class="form-menu-label">自己紹介</div>
+                    <br />
+                    <%= @user.self_introduction %>
+                </div>
+
+                <div class="field">
+                    <div class="form-menu-label">Twitterアカウント</div>
+                    <%= @user.twitter_account %>
+                </div>
+                <div class="field">
+                    <div class="form-menu-label">GitHubアカウント</div>
+                    <%= @user.github_account %>
+                </div>
+                <%= link_to "プロフィールを編集", edit_user_path(current_user.id), class: "btn btn-outline-dark common-btn edit-profile-btn" %>
+            </div>
+        </div>
+    </div>
