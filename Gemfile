@@ -28,6 +28,7 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'devise'
 gem 'font-awesome-sass'
+gem 'carrierwave'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false

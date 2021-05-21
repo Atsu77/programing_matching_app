@@ -3,33 +3,39 @@
     <h1 class="prof">プロフィール</h1>
     <div class="el-card_body">
       <div class="form-menu">
-        <div class="form-menu-label">ユーザー名</div>
-        <input class="nickname" type="text" />
-        <div class="form-menu-label">プロフィール画像</div>
-        <div class="form-item-upload">
-          <div class="">
-            <%= image_tag avatar_url(@user), class: "prof-img" %>
-            <img src="profile.png" alt="" />
-            <button type="button" class="btn btn-secondary">
-              画像をアップロード
-            </button>
-          </div>
-        </div>
-        <div class="form-self_introduction">
-          <div class="form-menu-label">自己紹介</div>
-          <textarea name="" id="" cols="30" rows="10" class="el-textarea"></textarea>
+        <%= form_with scope: :user, url: user_path(@user), local: true, method: :patch do |f| %>
+
+        <div class="field">
+          <%= f.label :name, "ユーザー名" ,class: "form-menu-label"%><br />
+          <%= f.text_field :name, class: "nickname" %>
         </div>
 
-        <form>
-        <div class="form-menu-label">Twitter</div>
-          <input type="url">
-        </form>
-        <form>
-        <div class="form-menu-label">GitHub</div>
-          <input type="url">
-        </form>
+        <%# if @user.profile_photo? %>
+        <%#= image_tag @user.image.url %>
+        <%# else %>
+        <%#= image_tag "profile.png", class: "prof-img" %>
+        <%# end %>
 
+        <%#= form_with model: @user do |image| %>
+        <%#= image.file_field :profile_photo %>
+        <%#= image.submit 'アップロードする' ,class: "btn btn-secondary"%>
+        <%# end%>
+
+        <div class="form-self_introductioneld">
+          <%= f.label :self_introduction, "自己紹介" ,class: "form-menu-label"%><br />
+          <%= f.text_area :self_introduction,  size: "30x10", class: "el-textarea" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :twitter_account, "Twitterアカウントを登録する" ,class: "form-menu-label"%><br />
+          <%= f.text_field :twitter_account %>
+        </div>
+        <div class="field">
+          <%= f.label :github_account, "GitHubアカウントを登録する" ,class: "form-menu-label"%><br />
+          <%= f.text_field :github_account %>
+        </div>
+      </div>
+    </div>
+    <%=f.submit "保存",  class: "btn btn-primary"%>
+    <% end %>
   </div>
-  <button type="button" class="btn btn-primary">保存</button>
-</div>
-</div>

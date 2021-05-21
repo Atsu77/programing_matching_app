@@ -1,27 +1,32 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
+  before_action :set_user, only: %i[edit update]
 
-    before_action :authenticate_user!
-    before_action :set_user, only: %i(edit update)
+  def edit; end
 
-
-    def edit
+  def update
+    #if params[:profile_photo]
+    #  image = params[:profile_photo]
+    #  @user.profile_photo = "#{@user.id}.jpg"
+    #  File.binwrite("public/user_image/#{@user.profile_photo}", image.read)
+    #  @user.save
+    #end
+    if @user.update(user_params)
+      flash[:notice] = "更新に成功しました"
+      redirect_to :root
+    else
+      flash[:alert] = "更新に失敗しました"
+      render action: :edit
     end
+  end
 
-    def update
-        if @user.update(user_params)
-            redirect_to :root
-        else
-            render action: :edit
-        end
-    end
+  private
 
-    private
+  def user_params
+    params.require(:user).permit(:name, :profile_photo, :self_introduction, :twitter_account, :github_account)
+  end
 
-    def user_params
-        params.require(:user).permit(:name, :self_introduction, :twitter_account, :github_account)
-    end
-
-    def set_user
-        @user = User.find(params[:id])
-    end
+  def set_user
+    @user = User.find(params[:id])
+  end
 end
